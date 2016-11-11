@@ -1,0 +1,3 @@
+== README
+
+Basic web application setup for a Rails workshop
