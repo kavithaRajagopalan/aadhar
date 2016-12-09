@@ -1,6 +1,7 @@
 class Person < ActiveRecord::Base
   before_save :generate_aadhar_number
   validates :name, presence: true
+  has_one :certificate
 
   private
   def generate_aadhar_number

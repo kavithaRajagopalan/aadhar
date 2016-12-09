@@ -16,3 +16,8 @@ To run the server in development mode
 
 To create a migration
  rails g migration LimitAadharNumberLength
+
+To create model association. Look at schema.rb to see the change effected after the command is run
+ rails g model Certificate name:string person:references
+
+
