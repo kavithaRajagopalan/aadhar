@@ -4,3 +4,7 @@ Basic web application setup for a Rails workshop
 Run
 $rake db:setup
 to create the dev, test databases and schema_migrations table in them
+
+To create a model
+ rails g model Person name:string address:text dob:date aadharNum:string gender:string
+
