@@ -8,3 +8,8 @@ to create the dev, test databases and schema_migrations table in them
 To create a model
  rails g model Person name:string address:text dob:date aadharNum:string gender:string
 
+To run migrations
+ rails db:migrate
+
+To run the server in development mode
+ rails server
