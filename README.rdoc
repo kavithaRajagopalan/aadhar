@@ -1,3 +1,6 @@
 == README
 
 Basic web application setup for a Rails workshop
+Run
+$rake db:setup
+to create the dev, test databases and schema_migrations table in them
