@@ -1,11 +1,16 @@
 class PeopleController < ApplicationController
 
+  def new
+    @person = Person.new
+  end
+
   def create
     @person = Person.new(sanitise_params)
-
-    @person.save
-
-    redirect_to @person
+    if @person.save
+      redirect_to @person
+    else
+      render 'new'
+    end
   end
 
   def show
@@ -15,7 +20,6 @@ class PeopleController < ApplicationController
   def index
     @people = Person.all
   end
-  
 
   private
   def sanitise_params

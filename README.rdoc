@@ -13,3 +13,6 @@ To run migrations
 
 To run the server in development mode
  rails server
+
+To create a migration
+ rails g migration LimitAadharNumberLength

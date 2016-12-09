@@ -1,16 +1,19 @@
 <%= form_for :person, url: people_path do |f| %>
-  <p>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </p>
+    <% if @person.errors.any? %>
+        <p> All inputs are mandatory </p>
+    <% end %>
     <p>
-    <%= f.label :address %>
-    <%= f.text_area :address %>
-  </p>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </p>
     <p>
-    <%= f.label :dob %>
-    <%= f.date_field :dob %>
-  </p>
+      <%= f.label :address %>
+      <%= f.text_area :address %>
+    </p>
+    <p>
+      <%= f.label :dob %>
+      <%= f.date_field :dob %>
+    </p>
     <p>
       <%= f.submit %>
     </p>
