@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CertificateTest < ActiveSupport::TestCase
+class BirthCertificateTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

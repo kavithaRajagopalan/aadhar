@@ -11,19 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161209142711) do
+ActiveRecord::Schema.define(version: 20161209145618) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "certificates", force: :cascade do |t|
-    t.string   "name"
+  create_table "birth_certificates", force: :cascade do |t|
     t.integer  "person_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.date     "date_of_issue"
   end
 
-  add_index "certificates", ["person_id"], name: "index_certificates_on_person_id", using: :btree
+  add_index "birth_certificates", ["person_id"], name: "index_birth_certificates_on_person_id", using: :btree
 
   create_table "people", force: :cascade do |t|
     t.string   "name"
@@ -35,5 +35,5 @@ ActiveRecord::Schema.define(version: 20161209142711) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "certificates", "people"
+  add_foreign_key "birth_certificates", "people"
 end

@@ -13,6 +13,7 @@
         <td><%= person.address %></td>
         <td><%= person.dob %></td>
         <td><%= person.aadharNum %></td>
+        <td><%= link_to("Birth certificate", person_birth_certificate_path(person, person.birth_certificate)) unless person.birth_certificate.nil? %></td>
       </tr>
   <% end %>
 
