@@ -1,0 +1,2 @@
+module BirthCertificatesHelper
+end
