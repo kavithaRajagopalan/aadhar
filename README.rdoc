@@ -1,23 +1,24 @@
 == README
 
 Basic web application setup for a Rails workshop
-Run
-$rake db:setup
-to create the dev, test databases and schema_migrations table in them
+
+To create the dev, test databases and schema_migrations table in them
+ bin/rails db:setup
 
 To create a model
- rails g model Person name:string address:text dob:date aadharNum:string gender:string
+ bin/rails g model Person name:string address:text dob:date aadharNum:string gender:string
 
 To run migrations
- rails db:migrate
+ bin/rails db:migrate
 
 To run the server in development mode
- rails server
+ bin/rails server
 
 To create a migration
- rails g migration LimitAadharNumberLength
+ bin/rails g migration LimitAadharNumberLength
 
 To create model association. Look at schema.rb to see the change effected after the command is run
- rails g model birth_certificate name:string person:references
+ bin/rails g model birth_certificate name:string person:references
 
-
+Refer http://guides.rubyonrails.org/getting_started.html for rails concepts 
+For resources on ruby check out https://hackr.io/tutorials/learn-ruby
